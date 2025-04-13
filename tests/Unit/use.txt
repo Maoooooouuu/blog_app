@@ -1,0 +1,37 @@
+public function test_authenticated_user_can_create_post()
+{
+    $user = User::factory()->create();
+    
+    $response = $this->actingAs($user)
+        ->post('/posts', [
+            'title' => 'Test Post',
+            'content' => 'This is a test post content'
+        ]);
+    
+    $response->assertRedirect(route('posts.index'));
+    $this->assertDatabaseHas('posts', ['title' => 'Test Post']);
+}public function test_authenticated_user_can_create_post()
+{
+    $user = User::factory()->create();
+    
+    $response = $this->actingAs($user)
+        ->post('/posts', [
+            'title' => 'Test Post',
+            'content' => 'This is a test post content'
+        ]);
+    
+    $response->assertRedirect(route('posts.index'));
+    $this->assertDatabaseHas('posts', ['title' => 'Test Post']);
+}public function test_authenticated_user_can_create_post()
+{
+    $user = User::factory()->create();
+    
+    $response = $this->actingAs($user)
+        ->post('/posts', [
+            'title' => 'Test Post',
+            'content' => 'This is a test post content'
+        ]);
+    
+    $response->assertRedirect(route('posts.index'));
+    $this->assertDatabaseHas('posts', ['title' => 'Test Post']);
+}
